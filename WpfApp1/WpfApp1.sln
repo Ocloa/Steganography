@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Steganography", "Steganography.csproj", "{355679C0-8CDE-44EC-9EE4-D244AF5D83D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1.csproj", "{5A7BB14B-6017-4B0C-8ADD-93F487872BDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{355679C0-8CDE-44EC-9EE4-D244AF5D83D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{355679C0-8CDE-44EC-9EE4-D244AF5D83D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{355679C0-8CDE-44EC-9EE4-D244AF5D83D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{355679C0-8CDE-44EC-9EE4-D244AF5D83D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A7BB14B-6017-4B0C-8ADD-93F487872BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A7BB14B-6017-4B0C-8ADD-93F487872BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A7BB14B-6017-4B0C-8ADD-93F487872BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A7BB14B-6017-4B0C-8ADD-93F487872BDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E7F15459-F348-4AD8-B0DC-D5872A7B8045}
+		SolutionGuid = {63C30D7D-5C77-466E-BB40-FCE1B59E36C1}
 	EndGlobalSection
 EndGlobal
