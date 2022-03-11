@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c93b1ff8-c47b-46cb-bcc3-75fdf1451021": {
+      "ProjectGuid": "c93b1ff8-c47b-46cb-bcc3-75fdf1451021",
+      "DisplayName": "Steganography",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

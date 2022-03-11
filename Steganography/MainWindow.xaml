@@ -1,0 +1,53 @@
+﻿<Window x:Class="Steganography.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Steganography"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Height="600" Width="920">
+
+    <Border Background="#121212"
+            CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Stega"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Foreground="#BB86FC"
+                       FontSize="22"
+                       Margin="20,0,0,0"/>
+            <StackPanel Grid.Row="1">
+
+                <RadioButton Content="Embed text"
+                             Height="50"
+                             Foreground="#BB86FC"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"/>
+                <RadioButton Content="Extract text"
+                             Height="50"
+                             Foreground="#BB86FC"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"/>
+
+                <RadioButton Content="Embed image"
+                             Height="50"
+                             Foreground="#BB86FC"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
