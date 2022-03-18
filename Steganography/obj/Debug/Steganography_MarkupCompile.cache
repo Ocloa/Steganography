@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\lexas\Documents\Steganography\Steganography\App.xaml
-31365566560
+5-1441439785
 
-6695345814
+12-1381068996
 13-1310406943
-MainWindow.xaml;Theme\MenuButtonTheme.xaml;Theme\TextboxTheme.xaml;
+MainWindow.xaml;MVVM\View\EmbedTextView.xaml;MVVM\View\HomeView.xaml;Theme\MenuButtonTheme.xaml;Theme\TextboxTheme.xaml;
 
 False
 

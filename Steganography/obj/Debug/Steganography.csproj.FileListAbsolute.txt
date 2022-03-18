@@ -17,3 +17,8 @@ C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\Steganography.pdb
 C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\Theme\MenuButtonTheme.baml
 C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\App.baml
 C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\Theme\TextboxTheme.baml
+C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\MVVM\View\HomeView.g.cs
+C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\MVVM\View\HomeView.baml
+C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\MVVM\View\EmbedTextView.g.cs
+C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\MVVM\View\EmbedTextView.baml

@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:Steganography.MVVM.ViewModel"
         xmlns:local="clr-namespace:Steganography"
         mc:Ignorable="d"
         WindowStyle="None"
@@ -11,8 +12,12 @@
         AllowsTransparency="True"
         Height="600" Width="920">
 
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    
     <Border Background="#121212"
-            CornerRadius="20">
+            CornerRadius="15">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -28,26 +33,37 @@
                        HorizontalAlignment="Left"
                        Foreground="#BB86FC"
                        FontSize="22"
-                       Margin="20,0,0,0"/>
+                       Margin="20,0,0,0"
+                       FontFamily="/Fonts/#Montserrat"/>
             <StackPanel Grid.Row="1">
 
+                <RadioButton Content="About"
+                             Height="50"
+                             Foreground="#BB86FC"
+                             FontSize="14"
+                             FontFamily="/Fonts/#Montserrat"
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True"
+                             Command="{Binding HomeViewCommand}"/>
                 <RadioButton Content="Embed text"
                              Height="50"
                              Foreground="#BB86FC"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             FontFamily="/Fonts/#Montserrat"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding EmbedViewCommand}"/>
+
                 <RadioButton Content="Extract text"
                              Height="50"
                              Foreground="#BB86FC"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
-
-                <RadioButton Content="Embed image"
-                             Height="50"
-                             Foreground="#BB86FC"
-                             FontSize="14"
+                             FontFamily="/Fonts/#Montserrat"
                              Style="{StaticResource MenuButtonTheme}"/>
             </StackPanel>
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
         </Grid>
     </Border>
 </Window>
