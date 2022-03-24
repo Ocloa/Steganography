@@ -31,9 +31,9 @@
                 </Border.Clip>
                 <Grid>
                     <StackPanel>
-                        <TextBlock Text="Stega is an app &#x0a;for embeding data into digital images"
+                        <TextBlock Text="Stega is an app developed &#xA;for embeding data into digital images"
                                    Foreground="White"
-                                   FontSize="20"
+                                   FontSize="18                                    "
                                    FontFamily="/Fonts/#Montserrat"
                                    Margin="20,10,10,0"/>
                     </StackPanel>

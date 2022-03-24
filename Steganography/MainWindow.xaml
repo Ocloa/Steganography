@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Steganography"
         mc:Ignorable="d"
         WindowStyle="None"
-        ResizeMode="NoResize"
+        ResizeMode="CanResizeWithGrip"
         Background="Transparent"
         AllowsTransparency="True"
         Height="600" Width="920">
@@ -28,6 +28,25 @@
                 <RowDefinition Height="75"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            <Border Grid.ColumnSpan="2"
+                    Background="#121212"
+                    CornerRadius="15"
+                    MouseDown="Border_MouseDown">
+                <StackPanel HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+                    <Button
+                            Content="✕"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="Gray"
+                            FontWeight="Bold" Margin="890,10,10,45"
+                            Click="CloseButton_Click"/>
+
+                </StackPanel>
+                    
+
+                    </Border>
+                
             <TextBlock Text="Stega"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
