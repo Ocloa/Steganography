@@ -77,7 +77,8 @@
                              Foreground="#BB86FC"
                              FontSize="14"
                              FontFamily="/Fonts/#Montserrat"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding ExtractViewCommand}"/>
             </StackPanel>
             <ContentControl Grid.Row="1"
                             Grid.Column="1"

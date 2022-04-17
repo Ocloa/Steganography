@@ -8,6 +8,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/TextboxTheme.xaml"/>
                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
@@ -16,6 +17,9 @@
             </DataTemplate>
 
             <DataTemplate DataType="{x:Type viewModel:EmbedTextViewModel}">
+                <view:EmbedTextView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:ExtractTextViewModel}">
                 <view:EmbedTextView/>
             </DataTemplate>
 

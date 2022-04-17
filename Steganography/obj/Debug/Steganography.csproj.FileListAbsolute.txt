@@ -22,3 +22,5 @@ C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\MVVM\View\HomeVie
 C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\MVVM\View\EmbedTextView.g.cs
 C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\MVVM\View\EmbedTextView.baml
+C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\MVVM\View\ExtractTextView.g.cs
+C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\MVVM\View\ExtractTextView.baml

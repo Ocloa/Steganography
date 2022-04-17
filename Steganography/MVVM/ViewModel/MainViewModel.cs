@@ -13,8 +13,11 @@ namespace Steganography.MVVM.ViewModel
 
         public RelayCommand EmbedViewCommand { get; set; }
 
+        public RelayCommand ExtractViewCommand { get; set; }
+
         public  HomeViewModel HomeVM { get; set; }
         public EmbedTextViewModel EmbedVM { get; set; }
+        public ExtractTextViewModel ExtractVM { get; set; }
         private object _currentView;
 
         public object CurrentView
@@ -29,6 +32,7 @@ namespace Steganography.MVVM.ViewModel
         {
             HomeVM = new HomeViewModel();
             EmbedVM = new EmbedTextViewModel();
+            ExtractVM = new ExtractTextViewModel();
             CurrentView = HomeVM;
             HomeViewCommand = new RelayCommand(o => 
             {
@@ -38,6 +42,10 @@ namespace Steganography.MVVM.ViewModel
            {
                CurrentView = EmbedVM;
            });
+            ExtractViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = ExtractVM;
+            });
         }
     }
 }
