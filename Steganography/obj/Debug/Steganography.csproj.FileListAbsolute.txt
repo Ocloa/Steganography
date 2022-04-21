@@ -24,3 +24,4 @@ C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\MVVM\View\EmbedTe
 C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\MVVM\View\EmbedTextView.baml
 C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\MVVM\View\ExtractTextView.g.cs
 C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\MVVM\View\ExtractTextView.baml
+C:\Users\lexas\Documents\Steganography\Steganography\obj\Debug\Theme\RadioButtonTheme.baml

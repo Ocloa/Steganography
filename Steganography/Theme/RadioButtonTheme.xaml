@@ -8,6 +8,7 @@
                         <Grid VerticalAlignment="Stretch"
                               HorizontalAlignment="Stretch"
                               Background="{TemplateBinding Background}">
+                            </Grid>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>

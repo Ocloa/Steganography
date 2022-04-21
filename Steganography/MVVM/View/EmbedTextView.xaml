@@ -5,21 +5,57 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Steganography.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="525" d:DesignWidth="720"
+             d:DesignHeight="575" d:DesignWidth="800"
              Background="Transparent">
     <Grid RenderTransformOrigin="0,0">
-        
-        <TextBox
-                VerticalContentAlignment="Center"
-                
-                Style="{StaticResource ModernTextBox}" Margin="10,10,415,243">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
+        <RichTextBox Margin="30,0,480,307"
+                     Style="{StaticResource ModernTextBox}">
+
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Image x:Name="pictureBoxInput" HorizontalAlignment="Left" Height="171" Margin="400,30,0,0" VerticalAlignment="Top" Width="341">
+
+        </Image>
+        <Image x:Name="pictureBoxStega" HorizontalAlignment="Left" Height="160" Margin="400,252,0,0" VerticalAlignment="Top" Width="341">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
+        <Label Content="Original Image"
+               HorizontalAlignment="Left"
+               Margin="424,6,0,0"
+               VerticalAlignment="Top" Foreground="#BB86FC"/>
+        <Label Content="Stega Image"
+            HorizontalAlignment="Left"
+            Margin="424,226,0,0"
+            VerticalAlignment="Top" Foreground="#BB86FC"/>
+        <TextBox x:Name="routeBox" HorizontalAlignment="Left"
+                 Margin="52,311,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="246" TextChanged="routeBox_TextChanged"/>
+        <TextBox x:Name="stegabox" HorizontalAlignment="Left"
+                 Margin="52,393,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="246"/>
+        <Label Content="Original Image route"
+            HorizontalAlignment="Left"
+            Margin="47,280,0,0"
+            VerticalAlignment="Top" Foreground="#BB86FC"/>
+        <Label Content="Stega Image route"
+            HorizontalAlignment="Left"
+            Margin="47,365,0,0"
+            VerticalAlignment="Top" Foreground="#BB86FC"/>
+        <Button x:Name="openButton" Content="Open..." HorizontalAlignment="Left"
+                Margin="52,340,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.601" Click="Button_Click"/>
+        <Button x:Name="OpenStegaButton" Content="Open..." HorizontalAlignment="Left"
+            Margin="52,425,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.601"/>
+        <Button x:Name="saveStegaButton" Content="Save..." HorizontalAlignment="Left"
+            Margin="238,425,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.601" Width="60" Click="saveStegaButton_Click"/>
     </Grid>
 </UserControl>
