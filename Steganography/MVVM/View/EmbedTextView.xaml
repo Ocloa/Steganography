@@ -52,6 +52,8 @@
         <RadioButton x:Name="lsb2" Content="LSB 2" HorizontalAlignment="Left" Margin="52,493,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
         <RadioButton x:Name="lsb3" Content="LSB 3" HorizontalAlignment="Left" Margin="52,533,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
         <RadioButton x:Name="lsb4" Content="LSB 4" HorizontalAlignment="Left" Margin="52,513,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
-        <TextBox x:Name="textToEmbed" HorizontalAlignment="Left" Margin="52,30,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="269" Height="222" HorizontalScrollBarVisibility="Visible" UseLayoutRounding="False" VerticalScrollBarVisibility="Visible"/>
+        <TextBox x:Name="textToEmbed" HorizontalAlignment="Left" Margin="52,30,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="269" Height="222" HorizontalScrollBarVisibility="Visible" UseLayoutRounding="False" VerticalScrollBarVisibility="Visible" TextChanged="textToEmbed_TextChanged"/>
+        <ProgressBar x:Name="pBar1" HorizontalAlignment="Left" Height="18" Margin="424,208,0,0" VerticalAlignment="Top" Width="351"/>
+        <Button x:Name="embedButton" Content="Embed" HorizontalAlignment="Left" Margin="101,260,0,0" VerticalAlignment="Top" Click="embedButton_Click"/>
     </Grid>
 </UserControl>
