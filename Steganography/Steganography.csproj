@@ -69,6 +69,7 @@
     <Compile Include="Core\Operations.cs" />
     <Compile Include="Core\RelayCommand.cs" />
     <Compile Include="Core\TextEmbedder.cs" />
+    <Compile Include="Core\TextExtractor.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

@@ -49,22 +49,22 @@ namespace Steganography.MVVM.View
         {
             if (lsb1.IsChecked==true)
             {
-                textToEmbed.MaxLength = (int)(((bmp_.Width * bmp_.Height) * 3) / 8);
+                textToEmbed.MaxLength = (int)(((bmp_.PixelWidth * bmp_.PixelHeight) * 3) / 8);
                 maxInputLength = textToEmbed.MaxLength;
             }
             else if (lsb2.IsChecked == true)
             {
-                textToEmbed.MaxLength = (int)(((bmp_.Width * bmp_.Height) * 3) / 4);
+                textToEmbed.MaxLength = (int)(((bmp_.PixelWidth * bmp_.PixelHeight) * 3) / 4);
                 maxInputLength = textToEmbed.MaxLength;
             }
             else if (lsb3.IsChecked == true)
             {
-                textToEmbed.MaxLength = (int)(((bmp_.Width * bmp_.Height) * 3) / 3);
+                textToEmbed.MaxLength = (int)(((bmp_.PixelWidth * bmp_.PixelHeight) * 3) / 3);
                 maxInputLength = textToEmbed.MaxLength;
             }
             else if (lsb4.IsChecked == true)
             {
-                textToEmbed.MaxLength = (int)(((bmp_.Width * bmp_.Height) * 2) / 2);
+                textToEmbed.MaxLength = (int)(((bmp_.PixelWidth * bmp_.PixelHeight) * 2) / 2);
                 maxInputLength = textToEmbed.MaxLength;
             }
         }
@@ -176,12 +176,14 @@ namespace Steganography.MVVM.View
             saveFile.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
+                stegabox.Text = saveFile.FileName.ToString();
                 bmp.BeginInit();
                 bmp.UriSource = new Uri(stegabox.Text);
-                stegabox.Text = saveFile.FileName.ToString();
-                pictureBoxStega.Source = bmp;
-                
-
+                var encoder = new PngBitmapEncoder();
+                encoder.Frames.Add(BitmapFrame.Create((BitmapSource)pictureBoxStega.Source));
+                using (FileStream stream = new FileStream(stegabox.Text, FileMode.Create))
+                    encoder.Save(stream);
+                bmp.EndInit();
             }
         }
 
@@ -190,27 +192,7 @@ namespace Steganography.MVVM.View
 
         }
 
-        private void OpenStegaButton_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                System.Windows.Forms.OpenFileDialog open = new System.Windows.Forms.OpenFileDialog();
-                open.Filter = "Image Files(*.jpg; *.png; *.jpeg; *.gif; *.bmp)|*.jpg; *.png; *.jpeg; *.gif; *.bmp";
-                open.InitialDirectory = @"C:\Users\User\Desktop\UNI\1920\productionProject\outputFiles";
-                if (open.ShowDialog() == DialogResult.OK)
-
-                {
-                    stegabox.Text = open.FileName.ToString();
-                    Uri fileUri = new Uri(open.FileName);
-                    pictureBoxStega.Source = new BitmapImage(fileUri);
-                }
-            }
-
-            catch (Exception)
-            {
-                throw new ApplicationException("Failed loading image");
-            }
-        }
+       
 
         private void textToEmbed_TextChanged(object sender, TextChangedEventArgs e)
         {
