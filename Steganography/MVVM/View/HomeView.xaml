@@ -14,9 +14,9 @@
                        HorizontalAlignment="Left"
                        Margin="0,0,0,20"/>
 
-        <StackPanel Orientation="Horizontal" >
-            <Border Width="400"
-                    Height="200">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="151" >
+            <Border Width="300"
+                    Height="75" Margin="0,-50,0,0" HorizontalAlignment="Stretch">
 
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
@@ -27,13 +27,62 @@
                 <Border.Clip>
                     <RectangleGeometry RadiusX="10"
                                        RadiusY="10"
-                                       Rect="0,0,400,200"/>
+                                       Rect="0,0,300,75"/>
                 </Border.Clip>
                 <Grid>
                     <StackPanel>
-                        <TextBlock Text="Stega is an app developed &#xA;for embeding data into digital images"
+                        <TextBlock Text="Stega is an app developed &#xA;for embeding data &#xA; into digital images"
                                    Foreground="White"
-                                   FontSize="18                                    "
+                                   FontSize="18"
+                                   FontFamily="/Fonts/#Montserrat"
+                                   Margin="20,5,10,0"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="250">
+            <Border Width="300"
+                    Height="150" Margin="0,0,0,0" HorizontalAlignment="Stretch">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#3BACB6" Offset="0.0"/>
+                        <GradientStop Color="#82DBD8" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                                       RadiusY="10"
+                                       Rect="0,0,300,150"/>
+                </Border.Clip>
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="To embed text&#xA;go to 'Embed text' page&#xA;Open your image&#xA;Choose embeding method&#xA;Write your text&#xA;Press embed"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   FontFamily="/Fonts/#Montserrat"
+                                   Margin="20,5,10,0"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <Border Width="300"
+                    Height=" 150" Margin="50,0,0,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#bb86fc" Offset="0.0"/>
+                        <GradientStop Color="#926dc7" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                                       RadiusY="10"
+                                       Rect="0,0,300,150"/>
+                </Border.Clip>
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="To extract text&#xA;go to 'Extract text' page&#xA;Open stega image&#xA;Choose embeding method&#xA;Press extract"
+                                   Foreground="#FFFFFF"
+                                   FontSize="18"
                                    FontFamily="/Fonts/#Montserrat"
                                    Margin="20,10,10,0"/>
                     </StackPanel>

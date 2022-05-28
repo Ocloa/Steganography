@@ -14,12 +14,24 @@
             HorizontalAlignment="Left"
             Margin="400,104,0,0"
             VerticalAlignment="Top" Foreground="#BB86FC"/>
-        <TextBox x:Name="decodedText" HorizontalAlignment="Left" Margin="34,269,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="269" Height="222" HorizontalScrollBarVisibility="Visible" UseLayoutRounding="False" VerticalScrollBarVisibility="Visible" TextChanged="textToEmbed_TextChanged"/>
+        <TextBox x:Name="decodedText" HorizontalAlignment="Left" Margin="29,288,0,0" TextWrapping="Wrap" Text="Extracted text will be displayed here..." VerticalAlignment="Top" Width="269" Height="222" HorizontalScrollBarVisibility="Visible" UseLayoutRounding="True" VerticalScrollBarVisibility="Auto" TextChanged="textToEmbed_TextChanged" Background="#FF1F1B24" BorderBrush="{x:Null}" Foreground="#FFBBB2CA" SelectionBrush="#FFBB86F9" IsReadOnlyCaretVisible="True" IsReadOnly="True">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
         <RadioButton x:Name="lsb1" Content="LSB 1" HorizontalAlignment="Left" Margin="34,204,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
         <RadioButton x:Name="lsb2" Content="LSB 2" HorizontalAlignment="Left" Margin="89,204,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
         <RadioButton x:Name="lsb3" Content="LSB 3" HorizontalAlignment="Left" Margin="145,204,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
         <RadioButton x:Name="lsb4" Content="LSB 4" HorizontalAlignment="Left" Margin="198,204,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
-        <Button Content="Extract" HorizontalAlignment="Left" Margin="34,238,0,0" VerticalAlignment="Top" Height="23" Width="48" Click="Button_Click_1"/>
+        <Button Content="Extract" HorizontalAlignment="Left" Margin="34,238,0,0" VerticalAlignment="Top" Height="23" Width="48" Click="Button_Click_1" Background="#FFA287C5" BorderBrush="{x:Null}" Foreground="White">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="2"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Label Content="Stega Image route"
             HorizontalAlignment="Left"
             Margin="29,35,0,0"
@@ -28,9 +40,15 @@
             Margin="34,66,0,0"
             TextWrapping="Wrap"
             VerticalAlignment="Top"
-            Width="246" TextChanged="stegabox_TextChanged"/>
+            Width="246" TextChanged="stegabox_TextChanged" Background="#FF1F1E1F" BorderBrush="{x:Null}" Foreground="White"/>
         <Button x:Name="openButton" Content="Open..." HorizontalAlignment="Left"
-            Margin="34,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.601" Click="Button_Click"/>
+            Margin="34,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.601" Click="Button_Click" Background="#FFA287C5" BorderBrush="{x:Null}" Foreground="White">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="2"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
     </Grid>
 </UserControl>

@@ -25,39 +25,57 @@
             Margin="424,226,0,0"
             VerticalAlignment="Top" Foreground="#BB86FC"/>
         <TextBox x:Name="routeBox" HorizontalAlignment="Left"
-                 Margin="52,311,0,0"
+                 Margin="52,44,0,0"
                  TextWrapping="Wrap"
                  VerticalAlignment="Top"
-                 Width="246" TextChanged="routeBox_TextChanged"/>
+                 Width="246" TextChanged="routeBox_TextChanged" Background="#FF1F1E1F" BorderBrush="{x:Null}" Foreground="White"/>
         <TextBox x:Name="stegabox" HorizontalAlignment="Left"
                  Margin="52,393,0,0"
                  TextWrapping="Wrap"
                  VerticalAlignment="Top"
-                 Width="246"/>
+                 Width="246" Background="#FF1F1E1F" BorderBrush="{x:Null}" Foreground="White"/>
         <Label Content="Original Image route"
             HorizontalAlignment="Left"
-            Margin="47,280,0,0"
+            Margin="47,13,0,0"
             VerticalAlignment="Top" Foreground="#BB86FC"/>
         <Label Content="Stega Image route"
             HorizontalAlignment="Left"
             Margin="47,365,0,0"
             VerticalAlignment="Top" Foreground="#BB86FC"/>
         <Button x:Name="openButton" Content="Open..." HorizontalAlignment="Left"
-                Margin="52,340,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.601" Click="Button_Click"/>
+                Margin="52,73,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.601" Click="Button_Click" Background="#FFA287C5" Foreground="White" BorderBrush="#FF1F1B24">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="2"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button x:Name="saveStegaButton" Content="Save..." HorizontalAlignment="Left"
-            Margin="52,428,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.601" Width="60" Click="saveStegaButton_Click"/>
-        <RadioButton x:Name="lsb1" Content="LSB 1" HorizontalAlignment="Left" Margin="52,260,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
-        <RadioButton x:Name="lsb2" Content="LSB 2" HorizontalAlignment="Left" Margin="107,260,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
-        <RadioButton x:Name="lsb3" Content="LSB 3" HorizontalAlignment="Left" Margin="163,260,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
-        <RadioButton x:Name="lsb4" Content="LSB 4" HorizontalAlignment="Left" Margin="216,260,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
-        <TextBox x:Name="textToEmbed" HorizontalAlignment="Left" Margin="52,30,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="269" Height="222" HorizontalScrollBarVisibility="Visible" UseLayoutRounding="False" VerticalScrollBarVisibility="Visible" TextChanged="textToEmbed_TextChanged"/>
-        <ProgressBar x:Name="pBar1" HorizontalAlignment="Left" Height="18" Margin="424,208,0,0" VerticalAlignment="Top" Width="351"/>
-        <Button x:Name="embedButton" Content="Embed" HorizontalAlignment="Left" Margin="280,258,0,0" VerticalAlignment="Top" Click="embedButton_Click" Foreground="White">
+            Margin="52,428,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,0.601" Width="60" Click="saveStegaButton_Click" Background="#FFA287C5" Foreground="White" BorderBrush="#FF1F1B24">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="2"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <RadioButton x:Name="lsb1" Content="LSB 1" HorizontalAlignment="Left" Margin="52,341,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <RadioButton x:Name="lsb2" Content="LSB 2" HorizontalAlignment="Left" Margin="107,341,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <RadioButton x:Name="lsb3" Content="LSB 3" HorizontalAlignment="Left" Margin="163,341,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <RadioButton x:Name="lsb4" Content="LSB 4" HorizontalAlignment="Left" Margin="216,341,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <TextBox x:Name="textToEmbed" HorizontalAlignment="Left" Margin="52,111,0,0" TextWrapping="Wrap" Text="Text to embed here..." VerticalAlignment="Top" Width="269" Height="222" HorizontalScrollBarVisibility="Visible" UseLayoutRounding="True" VerticalScrollBarVisibility="Auto" TextChanged="textToEmbed_TextChanged" Background="#FF1F1B24" BorderBrush="{x:Null}" Foreground="#FFBBB2CA" SelectionBrush="#FFBB86F9" AcceptsReturn="True" AcceptsTab="True">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+            <ProgressBar x:Name="pBar1" HorizontalAlignment="Left" Height="18" Margin="424,208,0,0" VerticalAlignment="Top" Width="351"/>
+        <Button x:Name="embedButton" Content="Embed" HorizontalAlignment="Left" Margin="280,339,0,0" VerticalAlignment="Top" Click="embedButton_Click" Foreground="White">
             <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF9E86C3" Offset="0"/>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF9E86C3"/>
                     <GradientStop Color="#FF7012FF" Offset="0.637"/>
-                </LinearGradientBrush>
+                </RadialGradientBrush>
             </Button.Background>
         </Button>
     </Grid>
