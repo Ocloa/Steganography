@@ -14,8 +14,6 @@ namespace Steganography.Core
             int num = n;
             int dec_value = 0;
 
-            // Initializing base1 
-            // value to 1, i.e 2^0 
             int base1 = 1;
 
             int temp = num;
@@ -37,8 +35,7 @@ namespace Steganography.Core
             long num = n;
             long dec_value = 0;
 
-            // Initializing base1 
-            // value to 1, i.e 2^0 
+
             long base1 = 1;
 
             long temp = num;
@@ -97,18 +94,17 @@ namespace Steganography.Core
         }
 
 
-        //WORKING!
         public string convLetterToBits(string in_)
         {
             char letter = Convert.ToChar(in_);
-            //convert letter to 32-bit int
+            //Буква в int32
             int value = Convert.ToInt32(letter);
-            //converting 32-bit int to (string) bits
+            //int32 в строковые биты
             BitArray ba = new BitArray(new int[] { value });
             string bits32 = "";
             for (int c = 0; c < ba.Length; c++)
             {
-                if (c % 8 < 7) //get first 8 bits of the 32bit int
+                if (c % 8 < 7) //получение первых 8 битов int32
                 {
                     //true = 1, false = 0
                     if (ba[c])
@@ -121,8 +117,7 @@ namespace Steganography.Core
                     }
                 }
             }
-            //get only the first byte of the 32bit (4 bytes) int and reverse using the function below 
-            string bitString = Reverse(bits32.Substring(0, 8));       //we now have the letter in binary. 
+            string bitString = Reverse(bits32.Substring(0, 8));       //Символ в бинарном коде. 
             //Console.WriteLine("bits: " + bitString + "||| value: " + value + "||| letter: " + letter);
             return bitString;
         }
